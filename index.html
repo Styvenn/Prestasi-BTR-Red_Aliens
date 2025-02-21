@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prestasi Moklet </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #dedede;
+        }
+        .navbar {
+            background-color: #b22222 !important;
+        }
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: center;
+        }
+        .navbar-brand {
+            margin: auto;
+            color: white !important;
+        }
+        .prestasi-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .prestasi-list .btn {
+            border-color: #b22222;
+            color: #b22222;
+            padding: 10px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .prestasi-list .btn:hover {
+            background-color: #b22222;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .video-container {
+            background: #dc3545;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: block;
+            color: white;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0%); }
+            to { transform: translateX(-100%); }
+        }
+        footer {
+            background-color: #b22222;
+        }
+    </style>
+    <script>
+        function changeVideo(url) {
+            let videoFrame = document.getElementById('videoFrame');
+            videoFrame.src = url + "?autoplay=1&rel=0";
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Prestasi BTR Red Aliens</a>
+            <br>
+            <a href="https://www.canva.com/" target="_blank" class="btn btn-light mt-3">Buka Canva</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 video-container">
+                <iframe id="videoFrame" width="100%" height="418" src="https://www.youtube.com/embed/ZhrjTfFDCUQ?feature=shared" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-4">
+                <div class="prestasi-list d-grid gap-2">
+                    <button class="btn btn-outline-primary" onclick="changeVideo('https://www.youtube.com/embed/R6iZAGs7Atc')"> Champion PMPL Sea II</button>
+                    <button class="btn btn-outline-primary" onclick="changeVideo('https://www.youtube.com/embed/Ff2FQ_ZLJ3M')"> Champion PMPL</button>
+                    <button class="btn btn-outline-primary" onclick="changeVideo('https://www.youtube.com/embed/owBv41a_SxI')"> Champion PMCO</button>
+                    <button class="btn btn-outline-primary" onclick="changeVideo('https://www.youtube.com/embed/DA3xDZ1TlKs')"> Champion PIMC</button>
+                    <button class="btn btn-outline-primary" onclick="changeVideo('https://www.youtube.com/embed/p-ce1YwZW68')"> Champion PMWL</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-white text-center p-2 mt-3">
+        <div class="marquee">
+            <span>Selamat Datang di Website Prestasi BTR Red Aliens! 🔥</span>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
